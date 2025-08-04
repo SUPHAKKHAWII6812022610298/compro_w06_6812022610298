@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    // 1. กำหนดค่าตัวแปรเริ่มต้น
+    int a = 5;
+    int b = 17;
+    float c = 8.5f;
+    float d = 4.0f;
+
+    // 2. แสดงค่าเริ่มต้นของตัวแปรทั้งหมด
+    printf("ค่าเริ่มต้น:\n");
+    printf("a = %d\n", a);
+    printf("b = %d\n", b);
+    printf("c = %.1f\n", c);
+    printf("d = %.1f\n", d);
+
+    // 3. การคำนวณต่าง ๆ
+    printf("\nผลการคำนวณ:\n");
+
+    printf("d + a = %.1f\n", d + a);            // 4.0 + 5 = 9.0
+    printf("a - b = %d\n", a - b);              // 5 - 17 = -12
+    printf("c * d = %.2f\n", c * d);            // 8.5 * 4.0 = 34.00
+    printf("a * c = %.2f\n", a * c);            // 5 * 8.5 = 42.50
+    printf("c / d = %.2f\n", c / d);            // 8.5 / 4.0 = 2.13
+    printf("b / c = %.2f\n", b / c);            // 17 / 8.5 = 2.00
+    printf("a %% b = %d\n", a % b);             // 5 % 17 = 5
+
+    // แปลง float เป็น int ก่อนนำไปหาร
+    int intC = (int)c;
+    printf("((int)c) %% a = %d\n", intC % a);   // 8 % 5 = 3
+
+    // ใช้ fmod สำหรับค่าทศนิยม
+    printf("fmod(c, d) = %.2f\n", fmod(c, d));  // 8.5 % 4.0 = 0.5
+
+    return 0;
+}
